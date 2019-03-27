@@ -1,17 +1,13 @@
-version: '2'
+version: '3.4'
 services:
   easy_ssb_pub:
-    build: .
-    environment:
-      HOST: "${HOST}"
-      HOME: "${HOME}"
-      DEBUG: "${DEBUG}"
+    build:
+      context: .
     ports:
       - "80:80"
       - "8008:8008"
       - "8007:8007"
     volumes:
-      - $HOME/.ssb:/root/.ssb
+      - ./docker_volumes/.ssb:/root/.ssb
     container_name: easy-ssb-pub
-    mem_limit: 450M
     restart: unless-stopped
