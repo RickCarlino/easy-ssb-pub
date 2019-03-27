@@ -12,5 +12,3 @@ WORKDIR /easy_ssb_pub
 COPY package.json /easy_ssb_pub/
 RUN  npm i
 COPY . /easy_ssb_pub
-
-CMD npm start

@@ -11,3 +11,5 @@ services:
       - ./docker_volumes/.ssb:/root/.ssb
     container_name: easy-ssb-pub
     restart: unless-stopped
+    env_file: .env
+    command: npm run start

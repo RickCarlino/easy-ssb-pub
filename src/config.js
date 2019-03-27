@@ -1,3 +1,4 @@
+"use strict";
 /*
 easy-ssb-pub: an easy way to deploy a Secure Scuttlebutt Pub.
 
@@ -16,9 +17,9 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
-import {setupScuttlebot} from './scuttlebot';
-import {setupExpressApp} from './http';
-
-const {ssbBot} = setupScuttlebot();
-setupExpressApp({bot: ssbBot});
+var createDebug = require("debug");
+var pkg = require('../package.json');
+exports.debug = createDebug(pkg.name);
+exports.version = pkg.version;
+exports.HTTP_PORT = 80;
+exports.SBOT_PORT = 8008;

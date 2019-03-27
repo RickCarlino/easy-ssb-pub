@@ -17,11 +17,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import createDebug = require('debug');
-
-const pkg = require('../package.json');
-
-export const debug = createDebug(pkg.name);
-export const version = pkg.version;
-export const HTTP_PORT = 80;
-export const SBOT_PORT = 8008;
+var scuttlebot_1 = require("./scuttlebot");
+var http_1 = require("./http");
+var ssbBot = scuttlebot_1.setupScuttlebot().ssbBot;
+http_1.setupExpressApp({ bot: ssbBot });
