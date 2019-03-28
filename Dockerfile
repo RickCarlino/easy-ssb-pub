@@ -8,7 +8,3 @@ RUN apt-get install -y libc6 libcurl3 zlib1g libtool autoconf libsodium-dev
 
 RUN mkdir -p /easy_ssb_pub
 WORKDIR /easy_ssb_pub
-
-COPY package.json /easy_ssb_pub/
-RUN  npm i
-COPY . /easy_ssb_pub
