@@ -28,14 +28,8 @@ This is a fork of the amazing [easy-ssb-pub](https://github.com/staltz/easy-ssb-
 
 You will need a server that supports a TCP sockets on ports 80, 8008 and 8007. This means [Heroku](https://heroku.com/) or [Zeit Now](https://zeit.co/now) will *not* work. Recommended services for servers-on-demand: [Digital Ocean Docker Droplet](https://www.digitalocean.com/products/one-click-apps/docker/), [UpCloud](https://upcloud.com/), [Amazon LightSail](https://amazonlightsail.com/), [Vultr](https://vultr.com/), [Linode](https://www.linode.com), etc.
 
-1. Acess your server via shell (e.g. SSH)
-2. Install [Docker](https://docs.docker.com/engine/installation/) and [Docker Compose](https://docs.docker.com/compose/install/)
-3. `git clone https://github.com/rickcarlino/easy-ssb-pub.git`
-4. `cd easy-ssb-pub`
-5. `cp .env.example .env`
-6. Follow the instructions in `.env` carefully.
-5. `docker-compose up`
-6. Open `http://YOUR_HOST/` in your browser
+1. Provision a new Ubuntu virtual machine
+2. Follow instructions in `install_on_ubuntu.sh`
 
 After the container has been created, stop/start/restart the server using:
 
