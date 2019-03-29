@@ -33,6 +33,7 @@ function setupScuttlebot() {
     var conf = argv.slice(i + 1);
     argv = ~i ? argv.slice(0, i) : argv;
     var ssbConf = confInject(process.env.ssb_appname, minimist(conf));
+    ssbConf.path = "./docker_volumes/ssb_data_stored_here"
     ssbConf.keys = ssbKeys.loadOrCreateSync(path.join(ssbConf.path, 'secret'));
     ssbConf.port = config_1.SBOT_PORT;
     ssbConf.swarm = { port: 8007, maxPeers: 3 };

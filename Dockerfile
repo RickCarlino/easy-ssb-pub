@@ -6,5 +6,4 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs libleveldb-dev
 RUN apt-get install -y libc6 libcurl3 zlib1g libtool autoconf libsodium-dev
 
-RUN mkdir -p /easy_ssb_pub
 WORKDIR /easy_ssb_pub

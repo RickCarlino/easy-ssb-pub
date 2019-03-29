@@ -10,7 +10,6 @@ services:
       - "8008:8008"
       - "8007:8007"
     volumes:
-      - ./docker_volumes/.ssb:/root/.ssb
       - .:/easy_ssb_pub
     container_name: easy-ssb-pub
     restart: unless-stopped
