@@ -1,6 +1,6 @@
 version: '3.4'
 services:
-  easy_ssb_pub:
+  easy-ssb-pub:
     image: easy_ssb_pub
     build:
       context: .

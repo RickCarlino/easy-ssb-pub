@@ -24,5 +24,5 @@ cp .env.example .env
 # NOTHING WILL WORK WITHOUT THIS STEP!
 micro .env
 
-sudo docker-compose run easy_ssb_pub npm install
+sudo docker-compose run easy-ssb-pub npm install
 sudo docker-compose up

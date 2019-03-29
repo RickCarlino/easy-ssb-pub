@@ -64,7 +64,6 @@ function setupExpressApp(opts) {
     app.get('/invited', function (req, res) {
         pull(createInvite(opts.bot, 1), pull.take(1), pull.drain(function (invitation) {
             var qrCode = qr.svgObject(invitation);
-            console.error("???");
             res.render('invited', {
                 invitation: invitation,
                 qrSize: qrCode.size,
